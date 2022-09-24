@@ -1,0 +1,105 @@
+// Is er een simpelere manier om de links toe te voegen?
+
+.social-media-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: right;
+}
+
+.social-media {
+  position: absolute;
+  right: 0px;
+  width: 50px;
+  height: 50px;
+  transition: width 1s;
+  text-align: left;
+  align-items: center;
+  font-size: 30px;
+}
+
+.social-media-link {
+  display: inline-block;
+  margin-left: 0px;
+  text-align: right;
+  color: white;
+  font-size: 15px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 1s;
+  transition: opacity 2s;
+}
+
+.social-media:hover {
+  width: 200px;
+}
+
+.social-media:hover .social-media-link {
+  visibility: visible;
+  opacity: 1;
+}
+
+.social-media.blog {
+  top: 0px;
+  background-color: #e17b77;
+  border-start-end-radius: 20px;
+}
+
+.social-media.facebook {
+  top: 50px;
+  background-color: #3b5998;
+}
+
+.social-media.twitter {
+  top: 100px;
+  background-color: #00aced;
+}
+
+.social-media.linkedin {
+  top: 150px;
+  background-color: #007bb6;
+}
+.social-media.github {
+  top: 200px;
+  background-color: #333;
+  border-end-start-radius: 20px;
+}
+
+.social-media::before {
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  color: white;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.social-media.blog::before {
+  font: var(--fa-font-solid);
+  content: "\f5fc";
+  margin-left: 6px;
+}
+
+.social-media.facebook::before {
+  font: var(--fa-font-brands);
+  content: "\f39e";
+  margin-left: 16px;
+}
+
+.social-media.twitter::before {
+  font: var(--fa-font-brands);
+  content: "\f099";
+  margin-left: 10px;
+}
+
+.social-media.github::before {
+  font: var(--fa-font-brands);
+  content: "\f09b";
+  margin-left: 10px;
+}
+
+.social-media.linkedin::before {
+  font: var(--fa-font-brands);
+  content: "\f0e1";
+  margin-left: 11px;
+}

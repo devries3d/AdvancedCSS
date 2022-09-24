@@ -1,0 +1,128 @@
+@import "./variables";
+@import "./social";
+@import "./portfolio";
+@import "./links";
+
+@mixin grid-center {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+body {
+  font-family: lato;
+  font-weight: 300;
+  margin: 0;
+  background-color: #c3cfe2;
+}
+
+.main-container {
+  @include grid-center();
+  position: relative;
+  width: auto;
+  margin: 20px;
+  padding: 0px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.paragraph-div {
+  text-align: left;
+  font-weight: 400;
+  margin-left: 30px;
+  margin-right: 60px;
+  margin-bottom: $marginBottomP;
+  font-size: 20px;
+  line-height: 40px;
+  color: #555555;
+}
+
+.circle-div img {
+  width: $diameterCircle;
+  height: $diameterCircle;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: $radiusCircle;
+  border: $borderCircle solid white;
+  background-color: aqua;
+  transform: translateY(-$radiusCircle);
+}
+
+.footer-div {
+  background-color: #686de0;
+  border-end-end-radius: 20px;
+  border-end-start-radius: 20px;
+  height: $footerHeight;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+.name-h1 {
+  font-size: 25px;
+  color: white;
+  margin: 20px;
+  transform: translateY(-$radiusCircle);
+}
+.site-h2 {
+  font-size: 20px;
+  color: #b3b6eb;
+  margin: 0;
+  transform: translateY(-$radiusCircle);
+}
+
+// <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Media queries >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+@media (min-width: 700px) {
+  .portfolio-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 825px) {
+  .main-container {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .portfolio-container {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .paragraph-div {
+    margin-bottom: $marginBottomP-L;
+    font-size: 25px;
+  }
+
+  // Ik wou eigenlijk iets doen zoals $diameterCircle: 300px in de media query, maar dat werkte niet. Is hier een oplossing voor? Of is hetgeen wat ik heb gedaan de "oplossing"?
+
+  .circle-div img {
+    width: $diameterCircle-L;
+    height: $diameterCircle-L;
+    border-radius: $radiusCircle-L;
+    transform: translateY(-$radiusCircle-L);
+  }
+
+  .footer-div {
+    height: $footerHeight-L;
+  }
+  .name-h1 {
+    transform: translateY(-$radiusCircle-L);
+  }
+
+  .site-h2 {
+    transform: translateY(-$radiusCircle-L);
+  }
+}
+
+@media (min-width: 1000px) {
+  .portfolio-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .portfolio-container {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

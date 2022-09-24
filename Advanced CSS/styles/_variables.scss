@@ -1,0 +1,11 @@
+$diameterCircle: 150px;
+$borderCircle: 10px;
+$radiusCircle: ($diameterCircle + ($borderCircle * 2))/2;
+$marginBottomP: $radiusCircle;
+$footerHeight: ($radiusCircle + 150px);
+
+$diameterCircle-L: 200px;
+$borderCircle-L: 10px;
+$radiusCircle-L: ($diameterCircle-L + ($borderCircle-L * 2))/2;
+$marginBottomP-L: $radiusCircle-L;
+$footerHeight-L: ($radiusCircle-L + 150px);
